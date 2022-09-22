@@ -1,0 +1,94 @@
+$enable-negative-margins: true;
+$primary: #393E46;
+$input-color: #EEEEEE;
+$nav-link-padding-y: .4rem;
+$nav-link-padding-x: .8rem;
+$nav-link-color: #EEEEEE;
+$nav-link-hover-color: #eeeeeee5;
+$nav-pills-link-active-color: #EEEEEE;
+$nav-pills-link-active-bg: #00ADB5;
+$nav-pills-border-radius: 50px;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "~swiper/css/bundle";
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+:root {
+  --bs-body-font-family: 'Quicksand',sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #222831;
+  color: #EEEEEE;
+}
+
+.input-group {
+  color: #eee;
+}
+
+.card, #searchElement {
+  background-color: #393E46;
+  border: none !important;
+}
+
+.bi-star-fill{
+  color: #FFDE00;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: #00ADB5;
+}
+
+.bi-list {
+  color: #EEEEEE;
+  font-size: 24px;
+}
+
+.offcanvas {
+  .dropdown-menu {
+    border: none;
+    background-color: $primary;
+    .dropdown-item:hover{
+      opacity: 0.8;
+      background-color: $primary;
+    }
+    .dropdown-item {
+      color: #EEEEEE;
+    }
+  }
+  .nav-link{
+    color: #EEEEEE;
+    font-weight: 700;
+  }
+  transition: transform 0.5s ease-in-out;
+  background-color: $primary;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),
+    rgba(27, 0, 0, 0),
+    transparent
+  );
+  color: white;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.modal-content {
+  background-color: #222832;
+}

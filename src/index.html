@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movieku - Movie Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+    <main>
+      <search-bar></search-bar>
+      <div id="homePage" class="container mx-auto row">
+        <div class="col-lg-8 px-0">
+          <carousel-element id="swiperCarousel"></carousel-element>
+          <div class="mx-auto pb-4">
+            <ul class="nav nav-pills d-flex align-items-center pb-3">
+              <h5 class="pe-3 fw-semibold my-auto">Popular</h5>
+              <li class="nav-item">
+                <a class="nav-link active" role="button" id="popularMovieTab">Movie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" id="popularTVTab">TV Series</a>
+              </li>
+            </ul>
+            <movie-list id="popular">
+              <div class="swiper popular-slider">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-next popular-next"></div>
+                <div class="swiper-button-prev popular-prev"></div>
+              </div>
+            </movie-list>
+          </div>
+          <div class="mx-auto pb-4">
+            <ul class="nav nav-pills d-flex align-items-center pb-3">
+              <h5 class="pe-3 fw-semibold my-auto">Trending</h5>
+              <li class="nav-item">
+                <a class="nav-link active" role="button" id="trendingTodayTab">Today</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" id="trendingWeekTab">This Week</a>
+              </li>
+            </ul>
+            <movie-list id="trending">
+              <div class="swiper trending-slider">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-next trending-next"></div>
+                <div class="swiper-button-prev trending-prev"></div>
+              </div>
+            </movie-list>
+          </div>
+        </div>
+        <div class="mx-auto row col-lg-4 ps-lg-4 px-0">
+          <div class="mx-auto col-lg-12 col-sm-6 pb-4 px-0 pe-sm-3 pe-lg-0">
+            <h5 class="pb-2 fw-semibold">Now Playing</h5>
+            <movie-list id="nowPlaying"></movie-list>
+          </div>
+          <div class="mx-auto col-lg-12 col-sm-6 pb-4 px-0">
+            <h5 class="pb-2 fw-semibold">Airing Today</h5>
+            <movie-list id="airingToday"></movie-list>
+          </div>
+        </div>
+      </div>
+      <div id="searchPage" class="container mx-auto d-none">
+        <h4 class="pb-2" id="resultTitle"></h4>
+        <ul class="nav nav-pills d-flex align-items-center pb-2">
+          <li class="nav-item">
+            <p class="nav-link active" role="button" id="searchMovieTab">Movie</p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" role="button" id="searchTVTab">TV Series</p>
+          </li>
+        </ul>
+        <movie-list id="searchResult" class="row"> </movie-list>
+      </div>
+      <movie-list id="navBarResult" class="row container mx-auto px-0 d-none"> </movie-list>
+      <movie-info></movie-info>
+    </main>
+    <footer class="mt-4 bg-primary">
+      <p class="py-3 mb-0 text-center text-white">Copyright © 2022 &mdash; Rahman Qolbi</p>
+    </footer>
+  </body>
+</html>
